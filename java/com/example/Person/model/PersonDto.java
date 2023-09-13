@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class PersonDto {
 	private int personId;
 	private String personName;
-
+        private String personCity;
 	public PersonDto() {
 		super();
 	}
@@ -15,6 +15,7 @@ public class PersonDto {
 		super();
 		this.personId = personId;
 		this.personName = personName;
+		this.personCity=personCity;
 		
 	}
 
@@ -32,7 +33,12 @@ public class PersonDto {
 	public void setPersonName(String personName) {
 		this.personName = personName;
 	}
-	
+	public String getPersonCity() {
+		return personName;
+	}
+	public void setPersonCity(String personCity) {
+		this.personCity = personCity;
+	}
 	}
 
 
