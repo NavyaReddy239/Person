@@ -1,0 +1,50 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.2'
+	id 'io.spring.dependency-management' version '1.1.2'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+	set('springCloudVersion', "2022.0.4")
+}
+
+dependencies {
+implementation 'org.springframework.cloud:spring-cloud-starter-config:4.0.4'
+	implementation 'org.springframework.cloud:spring-cloud-starter-config'
+	//implementation 'org.springframework.cloud:spring-cloud-starter-config'
+testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    runtimeOnly 'com.h2database:h2'
+implementation 'javax.xml.bind:jaxb-api:2.3.3' // Use the latest version
+    implementation 'org.glassfish.jaxb:jaxb-runtime:2.3.3'
+    implementation 'org.mapstruct:mapstruct:1.4.2.Final'
+     annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
+    implementation 'javax.xml.bind:jaxb-api:2.3.1'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+        implementation 'io.cucumber:cucumber-java:6.8.0'
+    testImplementation 'io.cucumber:cucumber-spring:6.8.0'
+   testImplementation 'io.cucumber:cucumber-junit:6.8.0'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'io.rest-assured:rest-assured:5.3.2'
+   
+	
+}
+
+
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

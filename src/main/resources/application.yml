@@ -1,0 +1,10 @@
+#server: 
+#  port: 8084
+#  
+#spring: 
+#  cloud:
+#    config:
+#      uri: http://localhost:8085/
+
+ 
+
